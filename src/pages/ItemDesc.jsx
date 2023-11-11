@@ -46,7 +46,7 @@ const ItemDesc = () => {
           <section className="sm:flex sm:h-[600px]">
             <div className="h-[300px] sm:w-[50%]  flex justify-center">
               <img
-                src={errorState ? "" : images[imageNumber]}
+                src={images[imageNumber]}
                 className="min-h-[250px] h-[250px] sm:h-[500px]"
                 alt={title}
               />
