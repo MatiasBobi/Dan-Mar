@@ -40,7 +40,7 @@ export const SearchResults = () => {
       ) : (
         <section className="flex flex-col justify-center items-center p-4 gap-4 pt-[64px] sm:grid sm:grid-cols-auto-fit-cols sm:gap-x-[150px] sm:w-[90%] h-full">
           {resultItems.length === 0 ? (
-            <section className="flex flex-col  h-[100%] gap-4 text-center justify-center items-center">
+            <section className="flex flex-col  h-screen  bg-red-400 w-screen gap-4 text-center justify-center items-center">
               <FontAwesomeIcon icon={faXmark} className="text-8xl text-[red]" />
               <p>
                 No se encontró lo que buscaba, para volver al inicio presione en
