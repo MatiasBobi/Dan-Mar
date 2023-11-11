@@ -10,7 +10,7 @@ const TableItemDesc = ({ attributes }) => {
       <tbody className="[&>tr]:p-[16px] text-center">
         {attributes.map((row, index) => {
           return (
-            <tr>
+            <tr key={index}>
               <td className="w-[50%] p-4 bg-gray-300">{row.name}</td>
               <td>{row.value_name}</td>
             </tr>

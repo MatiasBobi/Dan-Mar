@@ -10,6 +10,7 @@ import { Link } from "react-router-dom";
 const Navbar = () => {
   const [openCategory, setOpenCategory] = useState(false);
   const [openNavMobile, setOpenNavMobile] = useState(false);
+
   return (
     <header>
       <nav className="h-[50px] w-full bg-[#2E0537] fixed z-20 sm:w-[100vw] sm:pl-4">
@@ -28,11 +29,11 @@ const Navbar = () => {
               setOpenCategory(!openCategory);
               e.stopPropagation;
             }}
-            className="flex flex-col relative sm:basis-[100px] sm:ml-4"
+            className="flex flex-col relative sm:basis-[100px] sm:ml-4 "
           >
             <div className="flex flex-col justify-around relative">
-              <div className="flex justify-between sm:justify-normal gap-x-1 sm:hover:text-gray-500 ">
-                <span>Productos</span>
+              <div className="flex justify-between sm:justify-between gap-x-1 w-[100px] sm:hover:text-gray-500 ">
+                <span>Mis redes</span>
                 {openCategory ? (
                   <FontAwesomeIcon icon={faCaretUp} />
                 ) : (
@@ -44,16 +45,35 @@ const Navbar = () => {
                   openCategory
                     ? "h-[150px] transition-[height] ease-in-out duration-100 mt-4 "
                     : "h-0 transition-[height] duration-100 overflow-hidden "
-                } flex-col w-full [&>li]:p-4 bg-slate-800  sm:bottom-200 sm:p-0  sm:absolute sm:w-[250px] sm:hover:[&>li]:bg-zinc-800 sm:mt-[200px]  `}
+                } flex-col w-full [&>li]:p-4 bg-slate-800  sm:bottom-200 sm:p-0  sm:absolute sm:w-[250px] sm:hover:[&>li]:bg-zinc-800 sm:mt-[200px] [$.>a]bg-green-400 `}
               >
                 <li>
-                  <Link>Laptop</Link>
+                  <Link
+                    className="block w-full "
+                    to={`https://matiasleonardobobi-portfolio.netlify.app`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Portfolio
+                  </Link>
                 </li>
                 <li>
-                  <Link>Juguetes</Link>
+                  <Link
+                    to={`https://github.com/MatiasBobi`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Github
+                  </Link>
                 </li>
                 <li>
-                  <Link>Cocina</Link>
+                  <Link
+                    to={`linkedin.com/in/bobi-matias-leonardo-02b457247/`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Linkedin
+                  </Link>
                 </li>
               </ul>
             </div>
